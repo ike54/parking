@@ -8,11 +8,14 @@ the application has the name 'Parking' until further development and a name is c
 
 By [Isaac Karrer](https://twitter.com/bigike54)
 
-- GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.
+- When a user requests to park, user parking history would be used to list the probability to find a spot in their preffered lot.  Lots in close proximitity to the preferred lot and their probabilities could also be listed.
+    - The GPS coordinates could also be used to estimate the time it would take for a user to travel from the location where they requeseted to park, to their parking spot in a chosen lot.
+    - Combining the estimated time to reach the requested lot, the number of users currently en route to the lot, the number of people per time segment who successfully find a spot, and the number of people who could not find a spot and aborted a parking attempt per time segment, a probabilty to find a spot for that moment could be calculated.
+
+- When a user parks, GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.
     - The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.
     - A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.
-    - The GPS coordinates could also be used to estimate the time it would take for a user to travel from the location where they requeseted to park, to their parking spot in a chosen lot.
-    - Combining the estimated time to reach the requested lot, and the number of users en route to the lot, a probabilty to find a spot for that moment could be calculated.
+
 
 
 #To Do List
