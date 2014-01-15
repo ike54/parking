@@ -1,9 +1,11 @@
 #Parking Application
+A Ruby on Rails web application is proposed as a backend for the mobile user interface.
 
-The starting point from this application is from the repository [SampleApp](https://github.com/ike54/sampleApp).  SampleApp is the result of Isaac Karrer engaging in the [*Ruby on Rails Tutorial*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/).  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.
 
-This is parking spot locator application for Data Mining at Texas State
-the application has the name 'Parking' until further development and a name is chosen.
+The starting point from this application is from the repository [SampleApp](https://github.com/ike54/sampleApp).  The working web application, SampleApp may be viewed [here](https://blooming-falls-1904.herokuapp.com/).  SampleApp is the result of Isaac Karrer engaging in the [*Ruby on Rails Tutorial*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/).  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.
+
+This is parking spot locator application for Data Mining at Texas State.
+The application has the name 'Parking' until further development and a name is chosen.
 
 
 By [Isaac Karrer](https://twitter.com/bigike54)
@@ -16,15 +18,17 @@ By [Isaac Karrer](https://twitter.com/bigike54)
     - The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.
     - A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.
 
+- To prevent malicious users submitting unreliable data, only users with a texas state email will be allowed to register for the application
 
 
 #To Do List
 - Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete
-- Create Android application for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.
+- Create Android application for sending REST API requests for user registration, login, password recovery, Request to Park, Abort Park, Parked, Open Spot Found, etc.
 - Remove Microposts
 - Remove ability to change email login
 - Create ability to recover password
-- Create an active mailer to confirm a user has a Texas State email address and recover password
+- Add a validation that the user's email ends in @txstate.edu
+- (optional) Create an active mailer to confirm a user has a Texas State email address or to recover a password (further validates that the user has an active texas state email)
     - Add Confirmation Code and Confrimed fields to user model
     - Add controller method to user controller which expects a User Id and Confrimation Code
         - If Confirmation Code and User Id match, set Confirmed to True
