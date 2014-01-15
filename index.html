@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Parking by ike54</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Parking</h1>
+        <h2>4378 Data Mining Project</h2>
+        <a href="https://github.com/ike54/parking" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="parking-application" class="anchor" href="#parking-application"><span class="octicon octicon-link"></span></a>Parking Application</h1>
+
+<p>The starting point from this application is from the repository <a href="https://github.com/ike54/sampleApp">SampleApp</a>.  SampleApp is the result of Isaac Karrer engaging in the <a href="http://railstutorial.org/"><em>Ruby on Rails Tutorial</em></a> by <a href="http://michaelhartl.com/">Michael Hartl</a>.  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.</p>
+
+<p>This is parking spot locator application for Data Mining at Texas State
+the application has the name 'Parking' until further development and a name is chosen.</p>
+
+<p>By <a href="https://twitter.com/bigike54">Isaac Karrer</a></p>
+
+<ul>
+<li>
+<p>When a user requests to park, user parking history would be used to list the probability to find a spot in their preffered lot.  Lots in close proximitity to the preferred lot and their probabilities could also be listed.</p>
+
+<ul>
+<li>The GPS coordinates could also be used to estimate the time it would take for a user to travel from the location where they requeseted to park, to their parking spot in a chosen lot.</li>
+<li>Combining the estimated time to reach the requested lot, the number of users currently en route to the lot, the number of people per time segment who successfully find a spot, and the number of people who could not find a spot and aborted a parking attempt per time segment, a probabilty to find a spot for that moment could be calculated.</li>
+</ul>
+</li>
+<li>
+<p>When a user parks, GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.</p>
+
+<ul>
+<li>The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.</li>
+<li>A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.</li>
+</ul>
+</li>
+</ul><h1>
+<a name="to-do-list" class="anchor" href="#to-do-list"><span class="octicon octicon-link"></span></a>To Do List</h1>
+
+<ul>
+<li>Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete</li>
+<li>Create Android application for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.</li>
+<li>Remove Microposts</li>
+<li>Remove ability to change email login</li>
+<li>Create ability to recover password</li>
+<li>Create an active mailer to confirm a user has a Texas State email address and recover password
+
+<ul>
+<li>Add Confirmation Code and Confrimed fields to user model</li>
+<li>Add controller method to user controller which expects a User Id and Confrimation Code
+
+<ul>
+<li>If Confirmation Code and User Id match, set Confirmed to True</li>
+</ul>
+</li>
+<li>Create a route ex. users/1/confirm/code which maps to controller method</li>
+<li>Create action mailer template which accepts User Id as parameter
+
+<ul>
+<li>Send link to confirm route</li>
+</ul>
+</li>
+<li>Use and observer to generate a Confirmation Code on new accounts</li>
+<li>Create a helper method to check if a User Id is confirmed</li>
+</ul>
+</li>
+<li>Create table and models for parking lot perimeters with GPS coordinates
+
+<ul>
+<li>What datatype and how many points to use to establish parking lot perimeter?</li>
+</ul>
+</li>
+<li>Create table and models for parker's queueing statistics
+
+<ul>
+<li>Example fields:
+
+<ul>
+<li>Parking lot Id</li>
+<li>User Id</li>
+<li>Time enqueued</li>
+<li>Time spot found</li>
+<li>Time left spot</li>
+<li>Park aborted</li>
+<li>GPS location</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create table and models for open spots reported
+
+<ul>
+<li>Example fields:
+
+<ul>
+<li>Parking lot Id</li>
+<li>User Id</li>
+<li>GPS Location</li>
+<li>Time reported open</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/ike54/parking/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/ike54/parking/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/ike54/parking"></a> is maintained by <a href="https://github.com/ike54">ike54</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
