@@ -16,8 +16,6 @@ by [Isaac Karrer](https://twitter.com/bigike54)
 #To Do List
 - Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete
 - Create Android application for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.
-
-
 - Remove Microposts
 - Remove ability to change email login
 - Create ability to recover password
@@ -30,8 +28,6 @@ by [Isaac Karrer](https://twitter.com/bigike54)
         - Send link to confirm route
     - Use and observer to generate a Confirmation Code on new accounts
     - Create a helper method to check if a User Id is confirmed
-
-
 - Create table and models for parking lot perimeters with GPS coordinates
     - What datatype and how many points to use to establish parking lot perimeter?
 - Create table and models for parker's queueing statistics
