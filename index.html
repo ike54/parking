@@ -34,10 +34,12 @@
         <h1>
 <a name="parking-application" class="anchor" href="#parking-application"><span class="octicon octicon-link"></span></a>Parking Application</h1>
 
-<p>The starting point from this application is from the repository <a href="https://github.com/ike54/sampleApp">SampleApp</a>.  SampleApp is the result of Isaac Karrer engaging in the <a href="http://railstutorial.org/"><em>Ruby on Rails Tutorial</em></a> by <a href="http://michaelhartl.com/">Michael Hartl</a>.  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.</p>
+<p>A Ruby on Rails web application is proposed as a backend for the mobile user interface.</p>
 
-<p>This is parking spot locator application for Data Mining at Texas State
-the application has the name 'Parking' until further development and a name is chosen.</p>
+<p>The starting point from this application is from the repository <a href="https://github.com/ike54/sampleApp">SampleApp</a>.  The working web application, SampleApp may be viewed <a href="https://blooming-falls-1904.herokuapp.com/">here</a>.  SampleApp is the result of Isaac Karrer engaging in the <a href="http://railstutorial.org/"><em>Ruby on Rails Tutorial</em></a> by <a href="http://michaelhartl.com/">Michael Hartl</a>.  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.</p>
+
+<p>This is parking spot locator application for Data Mining at Texas State.
+The application has the name 'Parking' until further development and a name is chosen.</p>
 
 <p>By <a href="https://twitter.com/bigike54">Isaac Karrer</a></p>
 
@@ -58,16 +60,18 @@ the application has the name 'Parking' until further development and a name is c
 <li>A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.</li>
 </ul>
 </li>
+<li><p>To prevent malicious users submitting unreliable data, only users with a texas state email will be allowed to register for the application</p></li>
 </ul><h1>
 <a name="to-do-list" class="anchor" href="#to-do-list"><span class="octicon octicon-link"></span></a>To Do List</h1>
 
 <ul>
 <li>Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete</li>
-<li>Create Android application for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.</li>
+<li>Create Android application for sending REST API requests for user registration, login, password recovery, Request to Park, Abort Park, Parked, Open Spot Found, etc.</li>
 <li>Remove Microposts</li>
 <li>Remove ability to change email login</li>
 <li>Create ability to recover password</li>
-<li>Create an active mailer to confirm a user has a Texas State email address and recover password
+<li>Add a validation that the user's email ends in @txstate.edu</li>
+<li>(optional) Create an active mailer to confirm a user has a Texas State email address or to recover a password (further validates that the user has an active texas state email)
 
 <ul>
 <li>Add Confirmation Code and Confrimed fields to user model</li>
