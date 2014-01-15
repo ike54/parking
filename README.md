@@ -4,7 +4,9 @@ The starting point from this application is from the repository [SampleApp](http
 
 This is parking spot locator application for Data Mining at Texas State
 the application has the name 'Parking' until further development and a name is chosen.
-by [Isaac Karrer](https://twitter.com/bigike54)
+
+
+By [Isaac Karrer](https://twitter.com/bigike54)
 
 - GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.
     - The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.
