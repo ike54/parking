@@ -29,12 +29,7 @@ The starting point from this application is from the repository [SampleApp](http
         - User Id
         - GPS Location of reported spot
         - Time reported open
-
-
-
 - To prevent malicious users submitting unreliable data, only users with a texas state email will be allowed to register for the application
-
-
 #To Do List
 - Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete
 - Create Android application for sending REST API requests for user registration, login, password recovery, Request to Park, Abort Park, Parked, Open Spot Found, etc.
