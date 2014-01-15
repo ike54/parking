@@ -1,8 +1,10 @@
+######Note, the three links above will give a 404 error if you are not logged into Github and have not been invited by Isaac Karrer as a collaborator.
+
 #Parking Application
 A Ruby on Rails web application is proposed as a backend for the mobile user interface.
 
 
-The starting point from this application is from the repository [SampleApp](https://github.com/ike54/sampleApp).  The working web application, SampleApp may be viewed [here](https://blooming-falls-1904.herokuapp.com/) (the application must be woken up, patience please).  SampleApp is the result of Isaac Karrer engaging in the [*Ruby on Rails Tutorial*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/).  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.
+The starting point from this application is from the repository [SampleApp](https://github.com/ike54/sampleApp).  The working web application, SampleApp may be viewed [here](https://blooming-falls-1904.herokuapp.com/) (the application must wake up, patience please).  SampleApp is the result of Isaac Karrer engaging in the [*Ruby on Rails Tutorial*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/).  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.
 
 This is parking spot locator application for Data Mining at Texas State.
 The application has the name 'Parking' until further development and a name is chosen.
