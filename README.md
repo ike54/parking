@@ -6,13 +6,22 @@ This is parking spot locator application for Data Mining at Texas State
 the application has the name 'Parking' until further development and a name is chosen.
 by [Isaac Karrer](https://twitter.com/bigike54)
 
+- GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.
+    - The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.
+    - A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.
+    - The GPS coordinates could also be used to estimate the time it would take for a user to travel from the location where they requeseted to park, to their parking spot in a chosen lot.
+    - Combining the estimated time to reach the requested lot, and the number of users en route to the lot, a probabilty to find a spot for that moment could be calculated.
+
+
 #To Do List
 - Create RESTful API for all controller methods except for ones which require an admin user, e.g. delete
-- Create Android view for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.
+- Create Android application for sending REST API requests for user registration, login, Request to Park, Abort Park, Parked, Open Spot Found, etc.
+
+
 - Remove Microposts
 - Remove ability to change email login
 - Create ability to recover password
-- Create an active mailer to confirm a user has a Texas State email address
+- Create an active mailer to confirm a user has a Texas State email address and recover password
     - Add Confirmation Code and Confrimed fields to user model
     - Add controller method to user controller which expects a User Id and Confrimation Code
         - If Confirmation Code and User Id match, set Confirmed to True
@@ -21,6 +30,8 @@ by [Isaac Karrer](https://twitter.com/bigike54)
         - Send link to confirm route
     - Use and observer to generate a Confirmation Code on new accounts
     - Create a helper method to check if a User Id is confirmed
+
+
 - Create table and models for parking lot perimeters with GPS coordinates
     - What datatype and how many points to use to establish parking lot perimeter?
 - Create table and models for parker's queueing statistics
@@ -33,6 +44,7 @@ by [Isaac Karrer](https://twitter.com/bigike54)
 	    - Park aborted
 	    - GPS location
 - Create table and models for open spots reported
+    - Example fields:
         - Parking lot Id
         - User Id
         - GPS Location
