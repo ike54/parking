@@ -48,3 +48,4 @@ The starting point from this application is from the repository [SampleApp](http
     - Use and observer to generate a Confirmation Code on new accounts
     - Create a helper method to check if a User Id is confirmed
 - Create tables for parking data logging
+- Implement Data Mining logic to populate proposed lists
