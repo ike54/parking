@@ -5,16 +5,12 @@ A Ruby on Rails web application is proposed as a backend for the mobile user int
 
 
 The starting point from this application is from the repository [SampleApp](https://github.com/ike54/sampleApp).  The working web application, SampleApp may be viewed [here](https://blooming-falls-1904.herokuapp.com/) (the application must wake up, patience please).  SampleApp is the result of Isaac Karrer engaging in the [*Ruby on Rails Tutorial*](http://railstutorial.org/) by [Michael Hartl](http://michaelhartl.com/).  Once the Microposts model, table and tests are removed all that remains is an application where users may register, login, change passwords, and choose an avatar via gravatar.
-
-
 - When a user requests to park, user parking history would be used to list the probability to find a spot in their preferred lot.  Lots in close proximitity to the preferred lot and their probabilities could also be listed.
     - The GPS coordinates could also be used to estimate the time it would take for a user to travel from the location where they requeseted to park, to their parking spot in a chosen lot.
     - Combining the estimated time to reach the requested lot, the number of users currently en route to the lot, the number of people per time segment who successfully find a spot, and the number of people who could not find a spot and aborted a parking attempt per time segment, a probabilty to find a spot for that moment could be calculated.
-
 - When a user parks, GPS coordinates may be used to create a prioritized list of the parking lots in which the user may be currently located, with an option to select the parking lot from a full list if the parking lot does not appear in the original list.
     - The list would be used to confirm which lot the user found a spot to park in. Additionally the list could be used when the user has found open spots while walking through the parking lot.
     - A user's parking spot may be located on the border between two lots.  GPS on an Android device is not accurate enough to determine which lot a person is located.
-
 - Table and models for parking lot perimeters with GPS coordinates will be created
     - What datatype and how many points to use to establish parking lot perimeter?
 - Table and models for parker's queueing statistics will be created
