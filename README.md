@@ -47,4 +47,4 @@ The starting point from this application is from the repository [SampleApp](http
         - Send link to confirm route
     - Use and observer to generate a Confirmation Code on new accounts
     - Create a helper method to check if a User Id is confirmed
--Create tables for parking data logging
+- Create tables for parking data logging
