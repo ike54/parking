@@ -3,6 +3,7 @@ class Api::UsersController < ApplicationController
 	protect_from_forgery except: :create
 	skip_before_filter :authenticate_user!
 	before_action :correct_user,   only: [:edit, :update]
+	before_action :signed_in?, only: [:index, :edit, :update]
 	before_filter :fetch_user, :except => [:index, :create]
 
 	def fetch_user
@@ -39,7 +40,7 @@ class Api::UsersController < ApplicationController
 				format.json { render json: @user, status: :created }
 				format.xml { render xml: @user, status: :created }
 			else
-				format.js { render json: @user, content: params[:callback] }
+				format.js { render json: @user, content: params[:callback], status: :unprocessable_entity }
 				format.json { render json: @user.errors, status: :unprocessable_entity }
 				format.xml  { render xml: @user.errors, status: :unprocessable_entity }
 			end
