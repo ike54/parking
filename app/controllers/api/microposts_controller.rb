@@ -5,7 +5,7 @@ class Api::MicropostsController < ApplicationController
 	before_action :correct_user, only: :destroy
 
 	def index
-		@microposts = Micropost.all 
+		@microposts = current_user.microposts
 		respond_to do |format|
 			format.js { render json: @microposts, content: params[:callback], status: :ok }
 			format.json { render json: @microposts, status: :ok }
@@ -15,9 +15,9 @@ class Api::MicropostsController < ApplicationController
 
 
 	def create
-		@cur_user = User.find_by(remember_token: params[:token])
+		#@cur_user = User.find_by(remember_token: params[:token])
 
-		@micropost = @cur_user.microposts.build(micropost_params)
+		@micropost = current_user.microposts.build(micropost_params)
 		if @micropost.save
 			respond_to do |format|
 				format.js { render json: @micropost, content: params[:callback], status: :ok }
@@ -49,7 +49,7 @@ class Api::MicropostsController < ApplicationController
 		end
 
 		def correct_user
-			@cur_user = User.find_by(remember_token: params[:token])
-			@micropost = @cur_user.microposts.find_by(id: params[:id])
+			#@cur_user = User.find_by(remember_token: cookie[:remember_token])
+			@micropost = current_user.microposts.find_by(id: params[:id])
 		end
 end
