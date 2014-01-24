@@ -5,7 +5,7 @@ class Api::MicropostsController < ApplicationController
 	before_action :correct_user, only: :destroy
 
 	def index
-		@microposts = Microposts.all
+		@microposts = Micropost.all
 		#@microposts = current_user.microposts
 		respond_to do |format|
 			format.js { render json: @microposts, content: params[:callback], status: :ok }
