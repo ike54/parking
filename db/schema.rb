@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131213042459) do
+ActiveRecord::Schema.define(version: 20140127005858) do
+
+  create_table "lots", force: true do |t|
+    t.string   "name"
+    t.string   "lotid"
+    t.string   "permit"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lots", ["lotid"], name: "index_lots_on_lotid"
 
   create_table "microposts", force: true do |t|
     t.string   "content"
@@ -30,6 +40,7 @@ ActiveRecord::Schema.define(version: 20131213042459) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
+    t.string   "permit",          default: "pay"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

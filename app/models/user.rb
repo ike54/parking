@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password_confirmation, presence: true
 	validates :password, length: { minimum: 6 }
+	validates :permit, presence: true, inclusion: { in: %w(red purple green silver pay pool),
+													message: "%{value} is not a vaild permit"}
 
 	def feed
 		#This is preliminary. See "Following users" for the full implementation

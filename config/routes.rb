@@ -15,6 +15,7 @@ SampleApp::Application.routes.draw do
     resources :users, :defaults => { :format => 'json' }
     resources :sessions, :defaults => { :format => 'json' }
     resources :microposts, :defaults => { :format => 'json' }
+    match '/lots', to: 'lots#show', via: 'get'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

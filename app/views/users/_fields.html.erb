@@ -11,3 +11,6 @@
 
 <%= f.label :password_confirmation, "Confirm Password" %>
 <%= f.password_field :password_confirmation %>
+
+<%= f.label :permit, "Permit Type" %>
+<%= f.select :permit, options_for_select(["pay", "red", "purple", "green", "silver", "pool"]) %>
